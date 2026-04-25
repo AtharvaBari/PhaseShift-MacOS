@@ -7,13 +7,13 @@
     <language>en</language>
     <item>
       <title>Version 2.0.1</title>
-      <pubDate>Sun, 26 Apr 2026 00:30:00 +0000</pubDate>
+      <pubDate>Sun, 26 Apr 2026 01:00:00 +0000</pubDate>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <enclosure 
-        url="https://github.com/AtharvaBari/PhaseShift-MacOS/releases/download/v2.0.0/phaseshift_v2.0.1.dmg" 
-        sparkle:version="200" 
+        url="https://github.com/AtharvaBari/PhaseShift-MacOS/releases/download/v2.0.1/phaseshift_v2.0.1.dmg" 
+        sparkle:version="201" 
         sparkle:shortVersionString="2.0.1" 
-        length="1363148" 
+        length="2384424" 
         type="application/x-apple-diskimage" />
     </item>
   </channel>
