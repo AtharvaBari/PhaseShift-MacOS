@@ -39,3 +39,6 @@ private_key*
 *.key
 *.p12
 *.provisionprofile
+
+# Local docs (not for public repo)
+procedure.md
