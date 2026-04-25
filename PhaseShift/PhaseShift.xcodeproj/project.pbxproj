@@ -17,6 +17,8 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4FD37B502F9D291D00127307 /* PhaseShift */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = PhaseShift;
 			sourceTree = "<group>";
 		};
@@ -258,7 +260,8 @@
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PhaseShift/Info.plist;
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_SUFeedURL = "https://atharvabari.github.io/PhaseShift-MacOS/appcast.xml";
 				INFOPLIST_KEY_SUPublicEDKey = "rIBVwBzLoQwef7fvTQZEsWXSvFDUK46zI6qji9GG95g=";
@@ -303,7 +306,8 @@
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PhaseShift/Info.plist;
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_SUFeedURL = "https://atharvabari.github.io/PhaseShift-MacOS/appcast.xml";
 				INFOPLIST_KEY_SUPublicEDKey = "rIBVwBzLoQwef7fvTQZEsWXSvFDUK46zI6qji9GG95g=";
