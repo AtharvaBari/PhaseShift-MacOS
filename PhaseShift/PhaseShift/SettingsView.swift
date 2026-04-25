@@ -77,7 +77,7 @@ struct SettingsView: View {
             }
             .padding()
             
-            Text("PhaseShift v2.0.0")
+            Text("PhaseShift v2.0.1")
                 .font(.caption2)
                 .foregroundColor(.secondary)
                 .padding(.bottom, 8)
