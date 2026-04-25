@@ -11,6 +11,7 @@
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <enclosure 
         url="https://github.com/AtharvaBari/PhaseShift-MacOS/releases/download/v2.0.1/phaseshift_v2.0.1.dmg" 
+        sparkle:edSignature="8mlVWv8RfB/nE5nVxXwAGgSy4nFUcMEeBiv4R4WRvh7kOkOOSdvIhvk+qz0BZ4JOqu2F+Jf6hzWzmO/s94prBA==" 
         sparkle:version="201" 
         sparkle:shortVersionString="2.0.1" 
         length="2384424" 
