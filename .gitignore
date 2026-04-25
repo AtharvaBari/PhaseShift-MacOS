@@ -42,3 +42,6 @@ private_key*
 
 # Local docs (not for public repo)
 procedure.md
+*.txt
+*.key
+

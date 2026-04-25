@@ -6,15 +6,15 @@
     <description>Most recent changes for PhaseShift.</description>
     <language>en</language>
     <item>
-      <title>Version 2.0.2 (Test Update)</title>
-      <pubDate>Sun, 26 Apr 2026 01:10:00 +0000</pubDate>
+      <title>Version 2.0.1</title>
+      <pubDate>Sun, 26 Apr 2026 01:20:00 +0000</pubDate>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <enclosure 
         url="https://github.com/AtharvaBari/PhaseShift-MacOS/releases/download/v2.0.1/phaseshift_v2.0.1.dmg" 
-        sparkle:edSignature="8mlVWv8RfB/nE5nVxXwAGgSy4nFUcMEeBiv4R4WRvh7kOkOOSdvIhvk+qz0BZ4JOqu2F+Jf6hzWzmO/s94prBA==" 
+        sparkle:edSignature="5YjyZ/gZsuysWLeRm0bO3QoogGlMaWVuthZiPwcQKBxT5ZmQMz6ns8Ad++mMz8nghzC9quLrA3AYH3XPJfhxCg==" 
         sparkle:version="202" 
-        sparkle:shortVersionString="2.0.2" 
-        length="2384424" 
+        sparkle:shortVersionString="2.0.1" 
+        length="2384360" 
         type="application/x-apple-diskimage" />
     </item>
   </channel>
