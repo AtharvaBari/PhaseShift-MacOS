@@ -1,0 +1,41 @@
+# Xcode
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+xcuserdata/
+DerivedData/
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+*.archive
+
+# Build artifacts
+build/
+PhaseShift/build/
+*.app
+*.dSYM.zip
+*.dSYM
+*.ipa
+*.dmg
+*.pkg
+
+# Swift Package Manager
+.build/
+Packages/
+.swiftpm/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Keys & Secrets (CRITICAL)
+*.pem
+private_key*
+*.key
+*.p12
+*.provisionprofile
