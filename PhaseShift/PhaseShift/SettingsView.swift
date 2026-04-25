@@ -49,7 +49,7 @@ struct SettingsView: View {
            // FOOTER ACTIONS
             HStack {
                 Button("Check for Updates") {
-                    AppDelegate.shared.updaterController?.updater.checkForUpdates()
+                    AppDelegate.shared.updaterController?.checkForUpdates(nil)
                 }
                 
                 Spacer()

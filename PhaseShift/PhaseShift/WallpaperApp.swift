@@ -17,7 +17,7 @@ struct WallpaperApp: App {
             .keyboardShortcut(",", modifiers: .command)
             
             Button("Check for Updates...") {
-                appDelegate.updaterController?.updater.checkForUpdates()
+                appDelegate.updaterController?.checkForUpdates(nil)
             }
             
             Divider()

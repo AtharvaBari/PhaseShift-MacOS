@@ -7,14 +7,14 @@
     <language>en</language>
     <item>
       <title>Version 2.0.1</title>
-      <pubDate>Sun, 26 Apr 2026 01:20:00 +0000</pubDate>
+      <pubDate>Sun, 26 Apr 2026 01:32:00 +0000</pubDate>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <enclosure 
         url="https://github.com/AtharvaBari/PhaseShift-MacOS/releases/download/v2.0.1/phaseshift_v2.0.1.dmg" 
-        sparkle:edSignature="5YjyZ/gZsuysWLeRm0bO3QoogGlMaWVuthZiPwcQKBxT5ZmQMz6ns8Ad++mMz8nghzC9quLrA3AYH3XPJfhxCg==" 
+        sparkle:edSignature="WwS3WUSFdprVRP+hwX3XEvIiLZcY+H66FppjmGwWj6UExY+zi1+ACzE5lzS76WCvp+sNY9Lnqfzim43KMmlnBw==" 
         sparkle:version="202" 
         sparkle:shortVersionString="2.0.1" 
-        length="2384360" 
+        length="2384340" 
         type="application/x-apple-diskimage" />
     </item>
   </channel>
