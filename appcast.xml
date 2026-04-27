@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+  <channel>
+    <title>PhaseShift Updates</title>
+    <link>https://atharvabari.github.io/PhaseShift-MacOS/appcast.xml</link>
+    <description>Most recent changes for PhaseShift.</description>
+    <language>en</language>
+    <item>
+      <title>Version 2.0.8</title>
+      <pubDate>Mon, 27 Apr 2026 18:31:00 +0000</pubDate>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/AtharvaBari/PhaseShift-MacOS/releases/download/v2.0.8/PhaseShift_v2.0.8.zip" sparkle:edSignature="jMpUcGo6zEWGZJSO4TNr2UfA//9SnRNHwQyojnXQl2iC8I3FdY0mcIiX4TGU7U3rELs+LfQMuhrJwbKNev6jCg==" sparkle:version="208" sparkle:shortVersionString="2.0.8" length="1738850" type="application/zip"></enclosure>
+    </item>
+    <item>
+      <title>Version 2.0.7</title>
+      <pubDate>Mon, 27 Apr 2026 18:27:00 +0000</pubDate>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/AtharvaBari/PhaseShift-MacOS/releases/download/v2.0.7/PhaseShift_v2.0.7.zip" sparkle:edSignature="FNSEcOWXvl47D7gLDlcE3i8zPuzRsU7Ua/1JZFRrNX0UlFxiaw/gkqJVy/Wv3E23oYkl25voKMxXRe1NfboVCw==" sparkle:version="207" sparkle:shortVersionString="2.0.7" length="1738847" type="application/zip"></enclosure>
+    </item>
+    <item>
+      <title>Version 2.0.6</title>
+      <pubDate>Mon, 27 Apr 2026 18:05:00 +0000</pubDate>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/AtharvaBari/PhaseShift-MacOS/releases/download/v2.0.6/PhaseShift_v2.0.6.zip" sparkle:edSignature="5kQithD0JaZYBzr50PrK4Zh+yiEt4ypqaAbfZOsgbJNPHYS3kPvyPHC8Ucy1T4MVxe5FOaTFcY8r/8ZiV9g6Dw==" sparkle:version="206" sparkle:shortVersionString="2.0.6" length="1739846" type="application/zip"></enclosure>
+    </item>
+    <item>
+      <title>Version 2.0.5</title>
+      <pubDate>Mon, 27 Apr 2026 17:56:00 +0000</pubDate>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/AtharvaBari/PhaseShift-MacOS/releases/download/v2.0.5/PhaseShift_v2.0.5.zip" sparkle:edSignature="0DRU6lTUHhxeaFPMQCPCrScMinJAPauMkkV1E+HMkhL7QeA5TNtwQUjBJLmelpVZv/N1t05zezItdQpubOB/Dw==" sparkle:version="205" sparkle:shortVersionString="2.0.5" length="1739845" type="application/zip"></enclosure>
+    </item>
+    <item>
+      <title>Version 2.0.4</title>
+      <pubDate>Mon, 27 Apr 2026 16:43:00 +0000</pubDate>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/AtharvaBari/PhaseShift-MacOS/releases/download/v2.0.4/PhaseShift_v2.0.4.zip" sparkle:edSignature="y+abXqiDgFpp8q4u3vEsxj4LWdWcJSdGKxtc3ctaf8VfjgRbPrhFAjWe8Gpu5I/A97cJheTrjUjtA0wzt78VCQ==" sparkle:version="204" sparkle:shortVersionString="2.0.4" length="1739840" type="application/zip"></enclosure>
+    </item>
+    <item>
+      <title>Version 2.0.3</title>
+      <pubDate>Mon, 27 Apr 2026 15:42:00 +0000</pubDate>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/AtharvaBari/PhaseShift-MacOS/releases/download/v2.0.3/PhaseShift_v2.0.3.zip" sparkle:edSignature="wc8Gsuxu7aZSlk3a41nEitA2pfuH/RXwH5PbRrgLO0dTRfLgDwG6hTtV3uxjk1RBSPs6U3Z6ixlPchO8Q0A3Aw==" sparkle:version="203" sparkle:shortVersionString="2.0.3" length="1739838" type="application/zip"></enclosure>
+    </item>
+  </channel>
+</rss><!-- sparkle-signatures:
+edSignature: 25rvophrCwDSJ7CcUcnqXjz2e9SgrGAPF9SLVOyKc6ipATPjknygHAvawBhv6mTyS6C8emIG+HJa9WasBSwKDw==
+length: 3775
+-->
