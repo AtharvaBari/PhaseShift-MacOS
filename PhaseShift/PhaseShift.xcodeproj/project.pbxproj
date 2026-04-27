@@ -264,7 +264,7 @@
 				INFOPLIST_FILE = PhaseShift/Info.plist;
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_SUFeedURL = "https://atharvabari.github.io/PhaseShift-MacOS/appcast.xml";
-				INFOPLIST_KEY_SUPublicEDKey = "rIBVwBzLoQwef7fvTQZEsWXSvFDUK46zI6qji9GG95g=";
+				INFOPLIST_KEY_SUPublicEDKey = "n2DsGFjS5OvERWAwjtd2QbUs/8DTu6GSTp5NgRVcT6s=";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -310,7 +310,7 @@
 				INFOPLIST_FILE = PhaseShift/Info.plist;
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_SUFeedURL = "https://atharvabari.github.io/PhaseShift-MacOS/appcast.xml";
-				INFOPLIST_KEY_SUPublicEDKey = "rIBVwBzLoQwef7fvTQZEsWXSvFDUK46zI6qji9GG95g=";
+				INFOPLIST_KEY_SUPublicEDKey = "n2DsGFjS5OvERWAwjtd2QbUs/8DTu6GSTp5NgRVcT6s=";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

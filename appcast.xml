@@ -11,10 +11,10 @@
       <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
       <enclosure 
         url="https://github.com/AtharvaBari/PhaseShift-MacOS/releases/download/v2.0.3/phaseshift_v2.0.3.dmg" 
-        sparkle:edSignature="L2nsxISZvV0rCuWA63SXPinuEqFfz5WVlqwKQlcY5vI20MsfYpt7c0lsm8zN6WwsL8WsSVPoX+mp9ESvdmy0Cw==" 
+        sparkle:edSignature="sqo7j0BdAGqC8PBCs38ngskHyoDewcPu9vIayqh3KxlPct1jDN8QURTwn5Mh9esCxeB2uDLtV5BwW0reKaRTDA==" 
         sparkle:version="203" 
         sparkle:shortVersionString="2.0.3" 
-        length="2401879" 
+        length="1972370" 
         type="application/x-apple-diskimage" />
     </item>
   </channel>
