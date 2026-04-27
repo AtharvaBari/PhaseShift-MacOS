@@ -16,12 +16,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // Sparkle Updater Controller
     var updaterController: SPUStandardUpdaterController?
     
+    // Status Bar Item (for compatibility with older macOS)
+    var statusItem: NSStatusItem?
+    
     // Simple debounce tracking
     private var setupWorkItem: DispatchWorkItem?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         // Initialize Sparkle
         updaterController = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
+        
+        // Setup Menu Bar for older macOS compatibility
+        setupStatusItem()
         
         // Initial setup on main thread
         DispatchQueue.main.async { [weak self] in
@@ -185,5 +191,34 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.orderFront(nil)
         
         wallpaperWindows.append(window)
+    }
+
+    // MARK: - Status Bar / Menu
+    
+    func setupStatusItem() {
+        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+        if let button = statusItem?.button {
+            button.image = NSImage(systemSymbolName: "clock", accessibilityDescription: "Phase Shift")
+        }
+        
+        let menu = NSMenu()
+        menu.addItem(NSMenuItem(title: "Settings...", action: #selector(openSettingsMenuAction), keyEquivalent: ","))
+        menu.addItem(NSMenuItem(title: "Check for Updates...", action: #selector(checkForUpdatesAction), keyEquivalent: ""))
+        menu.addItem(NSMenuItem.separator())
+        menu.addItem(NSMenuItem(title: "Quit", action: #selector(quitAction), keyEquivalent: "q"))
+        
+        statusItem?.menu = menu
+    }
+    
+    @objc func openSettingsMenuAction() {
+        openSettingsWindow()
+    }
+    
+    @objc func checkForUpdatesAction() {
+        updaterController?.checkForUpdates(nil)
+    }
+    
+    @objc func quitAction() {
+        NSApplication.shared.terminate(nil)
     }
 }

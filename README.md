@@ -4,7 +4,7 @@
   <p><strong>Visualize Time. Master Focus.</strong></p>
   
   <p>
-    <img src="https://img.shields.io/badge/version-2.0.2-white?style=flat-square&logo=apple&logoColor=black" alt="Version" />
+    <img src="https://img.shields.io/badge/version-2.0.3-white?style=flat-square&logo=apple&logoColor=black" alt="Version" />
     <img src="https://img.shields.io/badge/platform-macOS-white?style=flat-square" alt="Platform" />
     <img src="https://img.shields.io/badge/license-MIT-white?style=flat-square" alt="License" />
   </p>
@@ -59,7 +59,7 @@ _"App cannot be opened because it is from an unidentified developer"_
 ## 🛠️ Built With
 
 - **Swift**: 5.9
-- **Target**: macOS v14+
+- **Target**: macOS v12+
 - **Architecture**: Native macOS (AppKit/SwiftUI)
 
 <br />

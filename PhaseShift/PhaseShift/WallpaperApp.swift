@@ -7,26 +7,18 @@ struct WallpaperApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
-        // NO WindowGroup. The settings window is managed manually in AppDelegate.
-        
-        // Menu Bar Icon
-        MenuBarExtra("Phase Shift", systemImage: "clock") {
-            Button("Settings...") {
-                appDelegate.openSettingsWindow()
-            }
-            .keyboardShortcut(",", modifiers: .command)
-            
-            Button("Check for Updates...") {
-                appDelegate.updaterController?.checkForUpdates(nil)
-            }
-            
-            Divider()
-            
-            Button("Quit") {
-                NSApplication.shared.terminate(nil)
-            }
-            .keyboardShortcut("q", modifiers: .command)
+        // We use AppDelegate to manage windows and the menu bar 
+        // to maintain compatibility with older macOS versions.
+        Settings {
+            EmptyView()
         }
+    }
+}
+
+// A helper for versions that don't support certain SwiftUI scenes
+struct EmptyScene: Scene {
+    var body: some Scene {
+        Settings { EmptyView() }
     }
 }
 

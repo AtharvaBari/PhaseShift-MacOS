@@ -77,14 +77,18 @@ struct SettingsView: View {
             }
             .padding()
             
-            Text("PhaseShift v2.0.2")
+            Text("PhaseShift v2.0.3")
                 .font(.caption2)
                 .foregroundColor(.secondary)
                 .padding(.bottom, 8)
         }
         .frame(width: 500, height: 720) 
         .onAppear {
-            launchAtLogin = SMAppService.mainApp.status == .enabled
+            if #available(macOS 13.0, *) {
+                launchAtLogin = SMAppService.mainApp.status == .enabled
+            } else {
+                launchAtLogin = false
+            }
         }
     }
     
@@ -157,7 +161,7 @@ struct SettingsView: View {
             
             Section("System") {
                 Toggle("Launch at Login", isOn: $launchAtLogin)
-                    .onChange(of: launchAtLogin) { oldValue, newValue in
+                    .onChange(of: launchAtLogin) { newValue in
                         toggleLaunchAtLogin(enabled: newValue)
                     }
                 
@@ -168,7 +172,7 @@ struct SettingsView: View {
                 }
             }
         }
-        .formStyle(.grouped)
+        .conditionalFormStyleGrouped()
     }
     
     var AgeSettingsView: some View {
@@ -188,22 +192,22 @@ struct SettingsView: View {
                         }
                         
                         VStack(alignment: .leading) {
-                            HStack { Text("Size"); Spacer(); Text("\(Int(viewModel.yearSize)) pts").foregroundStyle(.secondary) }
+                            HStack { Text("Size"); Spacer(); Text("\(Int(viewModel.yearSize)) pts").foregroundColor(.secondary) }
                             Slider(value: $viewModel.yearSize, in: 20...500, step: 5)
                         }
                         VStack(alignment: .leading) {
-                            HStack { Text("Detail Scale"); Spacer(); Text("\(Int(viewModel.componentScale * 100))%").foregroundStyle(.secondary) }
+                            HStack { Text("Detail Scale"); Spacer(); Text("\(Int(viewModel.componentScale * 100))%").foregroundColor(.secondary) }
                             Slider(value: $viewModel.componentScale, in: 0.1...1.0, step: 0.05)
                         }
                         VStack(alignment: .leading) {
-                            HStack { Text("Label Spacing"); Spacer(); Text("\(Int(viewModel.labelSpacing))").foregroundStyle(.secondary) }
+                            HStack { Text("Label Spacing"); Spacer(); Text("\(Int(viewModel.labelSpacing))").foregroundColor(.secondary) }
                             Slider(value: $viewModel.labelSpacing, in: -50...50, step: 1)
                         }
                     }
                     
                     appearanceSection
                 }
-                .formStyle(.grouped)
+                .conditionalFormStyleGrouped()
             } else {
                 DisabledStateView(message: "Switch to Age Mode to edit these settings.")
             }
@@ -229,29 +233,29 @@ struct SettingsView: View {
                     
                     Section("Grid Dimensions") {
                         VStack(alignment: .leading) {
-                            HStack { Text("Grid Width"); Spacer(); Text("\(Int(viewModel.yearGridWidth))").foregroundStyle(.secondary) }
+                            HStack { Text("Grid Width"); Spacer(); Text("\(Int(viewModel.yearGridWidth))").foregroundColor(.secondary) }
                             Slider(value: $viewModel.yearGridWidth, in: 100...1000, step: 10)
                         }
                         VStack(alignment: .leading) {
-                            HStack { Text("Dot Size"); Spacer(); Text("\(Int(viewModel.yearDotSize))").foregroundStyle(.secondary) }
+                            HStack { Text("Dot Size"); Spacer(); Text("\(Int(viewModel.yearDotSize))").foregroundColor(.secondary) }
                             Slider(value: $viewModel.yearDotSize, in: 2...50, step: 1)
                         }
                         VStack(alignment: .leading) {
-                            HStack { Text("Spacing"); Spacer(); Text("\(Int(viewModel.yearDotSpacingLocal))").foregroundStyle(.secondary) }
+                            HStack { Text("Spacing"); Spacer(); Text("\(Int(viewModel.yearDotSpacingLocal))").foregroundColor(.secondary) }
                             Slider(value: $viewModel.yearDotSpacingLocal, in: 0...50, step: 1)
                         }
                     }
                     
                     Section("Typography") {
                         VStack(alignment: .leading) {
-                            HStack { Text("Text Size"); Spacer(); Text("\(Int(viewModel.yearPtcSize)) pts").foregroundStyle(.secondary) }
+                            HStack { Text("Text Size"); Spacer(); Text("\(Int(viewModel.yearPtcSize)) pts").foregroundColor(.secondary) }
                             Slider(value: $viewModel.yearPtcSize, in: 20...500, step: 5)
                         }
                     }
                     
                     appearanceSection
                 }
-                .formStyle(.grouped)
+                .conditionalFormStyleGrouped()
             } else {
                 DisabledStateView(message: "Switch to Year Mode to edit these settings.")
             }
@@ -264,29 +268,34 @@ struct SettingsView: View {
             ColorPicker("Shadow Color", selection: Binding(get: { Color(hex: viewModel.shadowColorHex) }, set: { viewModel.shadowColorHex = $0.toHex() ?? "000000" }))
             
             VStack(alignment: .leading) {
-                HStack { Text("Blur"); Spacer(); Text("\(Int(viewModel.shadowRadius))").foregroundStyle(.secondary) }
+                HStack { Text("Blur"); Spacer(); Text("\(Int(viewModel.shadowRadius))").foregroundColor(.secondary) }
                 Slider(value: $viewModel.shadowRadius, in: 0...20, step: 0.5)
             }
             VStack(alignment: .leading) {
-                HStack { Text("Opacity"); Spacer(); Text("\(Int(viewModel.shadowOpacity * 100))%").foregroundStyle(.secondary) }
+                HStack { Text("Opacity"); Spacer(); Text("\(Int(viewModel.shadowOpacity * 100))%").foregroundColor(.secondary) }
                 Slider(value: $viewModel.shadowOpacity, in: 0...1, step: 0.05)
             }
             VStack(alignment: .leading) {
-                HStack { Text("Y Offset"); Spacer(); Text("\(Int(viewModel.shadowOffsetY))").foregroundStyle(.secondary) }
+                HStack { Text("Y Offset"); Spacer(); Text("\(Int(viewModel.shadowOffsetY))").foregroundColor(.secondary) }
                 Slider(value: $viewModel.shadowOffsetY, in: 0...20, step: 0.5)
             }
         }
     }
 
     private func toggleLaunchAtLogin(enabled: Bool) {
-        do {
-            if enabled {
-                try SMAppService.mainApp.register()
-            } else {
-                try SMAppService.mainApp.unregister()
+        if #available(macOS 13.0, *) {
+            do {
+                if enabled {
+                    try SMAppService.mainApp.register()
+                } else {
+                    try SMAppService.mainApp.unregister()
+                }
+            } catch {
+                print("Failed to toggle launch at login: \(error)")
             }
-        } catch {
-            print("Failed to toggle launch at login: \(error)")
+        } else {
+            // Fallback for macOS < 13 could go here (e.g. SMLoginItemSetEnabled)
+            print("Automatic launch at login toggle is not supported on this version of macOS.")
         }
     }
 }
@@ -304,5 +313,16 @@ struct DisabledStateView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(nsColor: .windowBackgroundColor))
+    }
+}
+
+extension View {
+    @ViewBuilder
+    func conditionalFormStyleGrouped() -> some View {
+        if #available(macOS 13.0, *) {
+            self.formStyle(.grouped)
+        } else {
+            self
+        }
     }
 }
